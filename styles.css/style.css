@@ -27,6 +27,16 @@ html{
     font-size: 62.5%;
 }
 
+html::-webkit-scrollbar{
+    width: 0.8rem;
+    background-color: white;
+}
+
+html::-webkit-scrollbar-thumb{
+    border-radius: 3rem;
+    background-color: var(--black-color);
+}
+
 body{
     background-color: var(--main-color);
 }
@@ -45,6 +55,22 @@ section{
     display: inline-block;
 }
 
+.btn:hover{
+    opacity: 0.9;
+}
+
+.heading{
+    color: white;
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin-bottom: 3.5rem;
+    border-bottom: 0.1rem solid white;
+}
+
+.heading span{
+    text-transform: uppercase;
+    color: var(--black-color);
+}
 
 /*! header start*/
 .header .logo img
@@ -104,14 +130,14 @@ section{
 
 .home .content{
     max-width: 60rem;
-
 }
+
 
 .home .content h3{
     font-size: 6rem;
     color: white;
-
 }
+
 
 .home .content p{
     font-size: 2rem;
@@ -119,10 +145,61 @@ section{
     line-height:1.8;
     padding: 1rem 0;
     color: #ccc;
-
 }
-
 
 /*!home end*/
 
+/*!menu start */
 
+.menu h1{
+
+}
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    gap: 2rem;
+}
+
+.menu .box-container .box{
+    padding: 3rem;
+    background-color: white;
+    border-radius: 3rem;
+    min-height: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.menu .box-container .box img
+{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.menu .box-container .box .menu-category
+{
+    font-size: 1.2rem;
+    text-transform: lowercase;
+}
+
+.menu .box-container .box h3
+{
+font-size: 3rem ;
+padding: 1rem 0;
+}
+
+.menu .box-container .box .price{
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+
+.menu .box-container .box .price span{
+    font-size: 1.75rem;
+    text-decoration: line-through;
+    font-weight: 300;
+}
+
+/*!menu end */
